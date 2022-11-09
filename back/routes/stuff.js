@@ -7,7 +7,7 @@ const stuffCtrl = require('../controllers/stuff');
 
 router.get('/', stuffCtrl.getAllStuff);
 
-router.post('/', (req, res, next) => {
+/*router.post('/', (req, res, next) => {
   const thing = new Thing({
     title: req.body.title,
     description: req.body.description,
@@ -99,7 +99,7 @@ router.get('/' +
       });
     }
   );
-});
+});*/
 
 router.get('/', auth, stuffCtrl.getAllStuff);
 router.post('/', auth, stuffCtrl.createThing);
